@@ -11,7 +11,7 @@ const Details = () => {
   const {id} = useParams()
 
   useEffect(() => {
-    axios.get(`http://127.0.0.1:5000/api/v1/shopping/product/${id}`)
+    axios.get(`https://eatery-web-service.onrender.com/shopping/product/${id}`)
     .then(res => {
       setData(res.data.product)
       console.log(res.data.product)
@@ -23,7 +23,7 @@ const Details = () => {
   const handleAddToCart = () => {
     // Dispatch addToCart action with selected product details
     dispatch(addToCart({
-      name: data.id,
+      id: data.id,
       name: data.name,
       brand: data.brand,
       price: data.price,
@@ -35,7 +35,7 @@ const Details = () => {
   return (
     <div className='detailContainer'>
       <div>
-        <img src={`http://127.0.0.1:5000/${data.image}`} alt={data.name} />
+        <img src={`https://eatery-web-service.onrender.com/${data.image}`} alt={data.name} />
       </div>
       <div>
         <h2>{data.name}</h2>

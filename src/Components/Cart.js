@@ -22,7 +22,7 @@ function Cart() {
                     items.map(item => (  
                         <div className='cart-item' key={item.id}>
                             <div className='cart-image'>
-                                <img src={`http://127.0.0.1:5000/${item.image}`} alt={item.name} />
+                                <img src={`https://eatery-web-service.onrender.com/${item.image}`} alt={item.name} />
                             </div>
                             <div className='card-details'>
                                 <h3>{item.name} </h3>

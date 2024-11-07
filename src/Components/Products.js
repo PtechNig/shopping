@@ -5,7 +5,7 @@ const Products = ({ query}) => {
     const [product, setProduct] = useState([]);
 
     useEffect(() => {
-        axios.get('http://127.0.0.1:5000/api/v1/shopping/product')
+        axios.get('https://eatery-web-service.onrender.com/shopping/product')
             .then(res => {
                 setProduct(res.data.product);
                 console.log(res.data.product);
@@ -24,7 +24,7 @@ const Products = ({ query}) => {
                                 item.brand.toLowerCase().includes(query)
                             )
                             .map(item => {
-                                const imageUrl = `http://127.0.0.1:5000/${item.image}`;
+                                const imageUrl = `https://eatery-web-service.onrender.com/${item.image}`;
                                 return (
                                     <div key={item._id} className='product'>
                                         <div className='product_image'>
