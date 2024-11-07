@@ -38,7 +38,7 @@ const Products = ({ query}) => {
                                             <h4>{item.name}</h4>
                                             <p className='description'>{item.description}</p>
                                             <p className='price'>Price: ${item.price}</p>
-                                            <a href={`Details/${item._id}`}> Details </a>
+                                            <a href={`https://eatery-web-service.onrender.com/shopping/product/${item._id}`}> Details </a>
                                         </div>
                                     </div>
                                 );
