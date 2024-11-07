@@ -1,23 +1,37 @@
-import logo from './logo.svg';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
+import Landing from './Components/Landing';
+import Nav from './Components/Nav';
+import Details from './Components/Details';
+import {  useState } from 'react';
+import Footer from './Components/Footer';
+import { Provider } from 'react-redux';
+import store from './Components/redux/store';
+import Cart from './Components/Cart';
+import About from './Components/About';
+import Contact from './Components/Contact';
+
+
+
 
 function App() {
+  const [query, setQuery] = useState("")
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Provider store={store}>
+          <BrowserRouter>
+            <Nav query={query} setQuery={setQuery} />
+            <Routes>
+              <Route path="/" element={<Landing query={query} />} />
+              <Route path="/Details/:id" element={<Details />} />
+              <Route path="/cart" element={< Cart />} />
+              <Route path="/about" element={< About />} />
+              <Route path="/contact" element={< Contact />} />
+            </Routes>
+            <Footer />
+          </BrowserRouter>
+          </Provider>
     </div>
   );
 }
