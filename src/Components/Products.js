@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Products = ({ query}) => {
     const [product, setProduct] = useState([]);
@@ -38,7 +39,7 @@ const Products = ({ query}) => {
                                             <h4>{item.name}</h4>
                                             <p className='description'>{item.description}</p>
                                             <p className='price'>Price: ${item.price}</p>
-                                            <a href={`https://eatery-web-service.onrender.com/shopping/product/${item._id}`}> Details </a>
+                                            <Link to={`product/${item._id}`}>Details</Link>
                                         </div>
                                     </div>
                                 );
