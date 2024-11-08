@@ -39,7 +39,7 @@ const Products = ({ query}) => {
                                             <h4>{item.name}</h4>
                                             <p className='description'>{item.description}</p>
                                             <p className='price'>Price: ${item.price}</p>
-                                            <Link to={`product/${item._id}`}>Details</Link>
+                                            <Link to={`shopping/product/${item._id}`}>Details</Link>
                                         </div>
                                     </div>
                                 );

@@ -24,7 +24,7 @@ function App() {
             <Nav query={query} setQuery={setQuery} />
             <Routes>
               <Route path="/" element={<Landing query={query} />} />
-              <Route path="/product/:id" element={<Details />} />
+              <Route path="/shopping/product/:id" element={<Details />} />
               <Route path="/cart" element={< Cart />} />
               <Route path="/about" element={< About />} />
               <Route path="/contact" element={< Contact />} />
