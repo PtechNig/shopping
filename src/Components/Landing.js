@@ -18,7 +18,7 @@ const Landing = ({query}) => {
         
        {images.map((image, index) => (
                     <div className="each-slide-effect" key={index}>
-                        <div style={{ backgroundImage: `url(${image})` }}>
+                        <div className='img' style={{ backgroundImage: `url(${image})` }}>
                         </div>
                     </div>
                 ))}

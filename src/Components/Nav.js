@@ -22,7 +22,7 @@ const Nav = (props) => {
 
       <div>
         <h1>
-            <FaCarSide />
+            < facar FaCarSide />
             <span className='logo'>P</span>
             tech
             
