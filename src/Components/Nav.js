@@ -38,15 +38,15 @@ const Nav = (props) => {
 
       <div className='cartIcon'>
         <Link to='cart' > <FaCartPlus/> {`  ${totalQuantity}`} </Link>
-      </div>
+      </div>``
       < RxHamburgerMenu className="hamburger-icon" onClick={handleToggle} />
 
 
       <nav className={isOpen ? "active " : "  "} >
         <ul className='ul'>
-          <li> <Link to='/'>Home</Link> </li>
-          <li> <Link to='/About'>About</Link> </li>
-          <li> <Link to='/Contact'>Contact</Link></li>
+          <li> <Link to='/' onClick={handleToggle} >Home</Link> </li>
+          <li> <Link to='/About' onClick={handleToggle} >About</Link> </li>
+          <li> <Link to='/Contact' onClick={handleToggle} >Contact</Link></li>
         </ul>
       </nav>
 
